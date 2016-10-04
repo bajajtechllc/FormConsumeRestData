@@ -12,8 +12,8 @@ public class RestResponseController {
     @RequestMapping("/restResponse")
     public String restResponse(Model model) {
         RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", String.class);
-        model.addAttribute("content", result);
+        Quote result = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+        model.addAttribute("quote", result);
         return "restResponse";
     }
 

@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="'Response from Rest Controller:' + ${content} " />
+    <p th:text="'type: ' + ${quote.type}" />
+	<p th:text="'id: ' + ${quote.value.id}" />
+	<p th:text="'quote: ' + ${quote.value.quote}" />
+	<a href="/restResponse">Get Next Quote</a>
 </body>
 </html>
